@@ -1,19 +1,32 @@
-<style>
-    * {
-        box-sizing: border-box;
-    }
-    html, body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden; /* Убирает полосы прокрутки */
-    }
-    body {
-        background-image: url('https://github.com'); 
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover; /* Растягивает во весь экран без потери пропорций */
-    }
-</style>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMod Loading Screen</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Убирает все полосы прокрутки */
+            background-color: #000000; /* Черный фон, пока картинка загружается */
+        }
+        body {
+            /* Ваша рабочая ссылка на изображение во весь экран */
+            background-image: url('https://github.com/Fariaze/re/blob/main/pgrplogo.jpg?raw=true'); 
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover; /* Растягивает картинку без искажения пропорций */
+        }
+    </style>
+</head>
+<body>
+    <!-- Код чистый. Сюда можно будет добавить текст или плеер с музыкой -->
+</body>
+</html>
