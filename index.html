@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>PGRP Loading Screen</title>
     <style>
+        /* Убираем все отступы и полосы прокрутки */
         html, body {
             margin: 0;
             padding: 0;
@@ -12,24 +13,31 @@
             overflow: hidden;
             background-color: #000;
         }
+        /* Растягиваем картинку ровно на 100% экрана без искажений */
         .bg-image {
             width: 100%;
             height: 100%;
-            background: url('https://githubusercontent.com') no-repeat center center fixed;
+            background: url('https://github.com/Fariaze/re/blob/main/pgrplogo.jpg') no-repeat center center fixed;
             background-size: cover;
         }
     </style>
 </head>
 <body>
+
+    <!-- На экране будет отображаться только этот блок с картинкой -->
     <div class="bg-image"></div>
 
     <script>
-        // Этот скрипт полностью отключает и скрывает дефолтный ползунок и текст GMod
+        /* Этот скрипт принудительно отключает и скрывает дефолтный 
+           ползунок загрузки Garry's Mod и тексты скачивания файлов */
         function GameDetails(servername, serverurl, mapname, maxplayers, steamid, gamemode, volume, language) {
             if (typeof gmod !== "undefined" && gmod.SetFilesNeeded) {
                 gmod.SetFilesNeeded(0);
             }
         }
+        function SetFilesNeeded(needed) { return; }
+        function SetFilesRemaining(remaining) { return; }
+        function SetStatusChanged(status) { return; }
     </script>
 </body>
 </html>
