@@ -2,72 +2,25 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>PGRP Красногорск - Загрузка</title>
+    <title>PGRP Loading</title>
     <style>
-        body {
+        html, body {
             margin: 0;
             padding: 0;
-            background: #111 url('https://githubusercontent.com') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-        .overlay {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 0, 0, 0.4); /* Затемнение фона для читаемости */
-            z-index: 1;
-        }
-        .container {
-            position: relative;
-            z-index: 2;
-            background: rgba(20, 20, 20, 0.85);
-            padding: 40px 60px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
-            border: 2px solid #3498db;
-            max-width: 500px;
             width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
         }
-        h1 {
-            color: #fff;
-            font-size: 26px;
-            margin: 0 0 10px 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-        }
-        p {
-            color: #bdc3c7;
-            font-size: 16px;
-            margin: 5px 0 25px 0;
-        }
-        .status-box {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 12px;
-            border-radius: 6px;
-            color: #3498db;
-            font-weight: bold;
-            font-size: 15px;
-            border-left: 4px solid #3498db;
+        .bg-image {
+            width: 100%;
+            height: 100%;
+            background: url('https://githubusercontent.com') no-repeat center center fixed;
+            background-size: cover;
         }
     </style>
 </head>
 <body>
-
-    <div class="overlay"></div>
-
-    <div class="container">
-        <h1>PGRP г.Красногорск</h1>
-        <p>Добро пожаловать! Добро пожаловать!</p>
-        
-        <div class="status-box">
-            Идет подключение к серверу...
-        </div>
-    </div>
-
+    <div class="bg-image"></div>
 </body>
 </html>
