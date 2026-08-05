@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>PGRP Loading</title>
+    <title>PGRP Loading Screen</title>
     <style>
         html, body {
             margin: 0;
@@ -22,5 +22,14 @@
 </head>
 <body>
     <div class="bg-image"></div>
+
+    <script>
+        // Этот скрипт полностью отключает и скрывает дефолтный ползунок и текст GMod
+        function GameDetails(servername, serverurl, mapname, maxplayers, steamid, gamemode, volume, language) {
+            if (typeof gmod !== "undefined" && gmod.SetFilesNeeded) {
+                gmod.SetFilesNeeded(0);
+            }
+        }
+    </script>
 </body>
 </html>
