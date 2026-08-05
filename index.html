@@ -2,61 +2,71 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>GMod Loading Screen</title>
+    <title>PGRP Красногорск - Загрузка</title>
     <style>
         body {
-            background-color: #0b0c10;
-            color: #c5c6c7;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
+            background: #111 url('https://githubusercontent.com') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
+        }
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* Затемнение фона для читаемости */
+            z-index: 1;
         }
         .container {
-            background: rgba(31, 40, 51, 0.8);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            border: 1px solid #45f3ff;
-        }
-        img {
-            max-width: 250px;
-            height: auto;
-            margin-bottom: 20px;
-            border-radius: 5px;
+            position: relative;
+            z-index: 2;
+            background: rgba(20, 20, 20, 0.85);
+            padding: 40px 60px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+            border: 2px solid #3498db;
+            max-width: 500px;
+            width: 100%;
         }
         h1 {
-            font-size: 28px;
-            color: #45f3ff;
+            color: #fff;
+            font-size: 26px;
             margin: 0 0 10px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
         }
         p {
-            font-size: 18px;
-            margin: 5px 0;
+            color: #bdc3c7;
+            font-size: 16px;
+            margin: 5px 0 25px 0;
         }
-        .footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #66fcf1;
+        .status-box {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 12px;
+            border-radius: 6px;
+            color: #3498db;
+            font-weight: bold;
+            font-size: 15px;
+            border-left: 4px solid #3498db;
         }
     </style>
 </head>
 <body>
 
+    <div class="overlay"></div>
+
     <div class="container">
-        <!-- Ссылка на ваш логотип из репозитория -->
-        <img src="pgrplogo.jpg" alt="Logo">
+        <h1>PGRP г.Красногорск</h1>
+        <p>Добро пожаловать! Добро пожаловать!</p>
         
-        <h1>Добро пожаловать на сервер!</h1>
-        <p>Идет загрузка ресурсов, пожалуйста, подождите...</p>
-        
-        <!-- Замените текст ниже на адрес вашего сайта -->
-        <div class="footer">Наш сайт: ://your-website.com</div>
+        <div class="status-box">
+            Идет подключение к серверу...
+        </div>
     </div>
 
 </body>
