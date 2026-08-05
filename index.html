@@ -3,30 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GMod Loading Screen</title>
+    <title>PGRP Loading Screen</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
-        html, body {
+        /* Обнуляем отступы и фиксируем фон на весь экран */
+        body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden; /* Убирает все полосы прокрутки */
-            background-color: #000000; /* Черный фон, пока картинка загружается */
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            background-color: #050505;
         }
-        body {
-            /* Ваша рабочая ссылка на изображение во весь экран */
-            background-image: url('https://github.com/Fariaze/re/blob/main/pgrplogo.jpg?raw=true'); 
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover; /* Растягивает картинку без искажения пропорций */
+
+        /* Полноэкранный задний фон (опционально, если захочешь заменить сплошной цвет на размытую карту) */
+        .background-blur {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%);
+            z-index: 1;
         }
-    </style>
-</head>
-<body>
-    <!-- Код чистый. Сюда можно будет добавить текст или плеер с музыкой -->
-</body>
+
+        /* Контейнер по центру экрана */
+        .loader-container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Стилизация и анимация покачивания логотипа PGRP */
+        .logo {
+            width: 250px;
+            height: auto;
+            filter: drop-shadow(0 0 25px rgba(33, 150, 243, 0.6);
+            анимация: float 4s легкость в выходе бесконечна;
+        }
+
+        /* Текст приветствия */
+        х1 {
+            цвет: #ffffff;
+            маргинальный верх: 30пх;
+            размер шрифта: 2,5рем;
+            преобразование текста: верхний регистр;
+            интервал между буквами: 3пх;
+            текст-тень: 0 2пх 10пх ргба(0, 0, 0, 0,7);
+        }
+
+        /* Анимация Плавного паранья для логотипа */
+        @keyframes плавает {
+            0% { transform: translateY(0пх); }
+            50% { transform: translateY(-15пх); }
+            100% { transform: translateY(0пх); }
+        }
+    </стиль>
+</голова>
+<тело>
+
+    <див класс="фон-размытие"></див>
+
+    <див класс="погрузчик-контейнер">
+        <!-- Логотип ПГРП поодгружитсья приямо из того, что репозитория -->
+        <имг срк="пгрплого.jpg" альт="Логотип PGRP" класс="logo">
+        <h1>Добро пожаловать на PGRP</h1>
+    </див>
+
+</тело>
 </html>
